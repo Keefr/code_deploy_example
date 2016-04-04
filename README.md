@@ -1,27 +1,26 @@
-Instructions
-============
-1.) When server is booted run the following commands as root.
+Alien Invasion
+==============
+This is the sample game that is built in the first three Chapter of
+mobile HTML5 Game Development.
 
-yum -y update
+It is released under both the GPL and MIT license to do with what you will.
 
-yum install -y aws-cli
+Playable Version: 
+http://cykod.github.com/AlienInvasion/
 
-cd /home/ec2-user
+Bit.ly link for mobile: 
+http://bit.ly/html5-invasion
 
-2.) Here you will setup your AWS access, secret, and region.
 
-aws configure 
+If you make an interesting fork or enhancement of the game, let me know and it'll get
+linked to here. This original repo will stay matching the code in the book.
 
-aws s3 cp s3://aws-codedeploy-us-east-1/latest/install . --region us-east-1
+For more  [HTML5 Game Development](http://www.html5gamedevelopment.org) resources, see:
 
-chmod +x ./install
+* [HTML5 Game Demos](http://www.html5gamedevelopment.org/html5-demos)
+* [HTML5 GameDev Tutorials](http://www.html5gamedevelopment.org/html5-game-tutorials)
+* [HTML5 Game Development News](http://www.html5gamedevelopment.org/html5-news)
+* [HTML5 Game Engines](http://www.html5gamedevelopment.org/html5-engines)
 
-3.) This is simply a quick hack to get the agent running faster.
 
-sed -i "s/sleep(.*)/sleep(10)/" install 
 
-./install auto
-
-4.) Verify it is running.
-
-service codedeploy-agent status 
